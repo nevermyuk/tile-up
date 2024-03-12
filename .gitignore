@@ -1,0 +1,5 @@
+node_modules
+src/node_modules/
+.vscode
+
+src/client/node_modules/

@@ -1,0 +1,70 @@
+{
+  "name": "tile-up",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run server",
+    "server": "nodemon index.js ",
+    "client": "npm run serve --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "lint": "eslint --fix",
+    "format": "prettier -w .",
+    "test": "jest",
+    "test-coverage": "jest --coverage",
+    "postinstall": "(cd client && npm install)"
+  },
+  "keywords": [],
+  "author": "",
+  "nodemonConfig": {
+    "ignore": [
+      "client/",
+      "tests/"
+    ]
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "client",
+      "node_modules"
+    ],
+    "collectCoverageFrom": [
+      "!**/node_modules/**",
+      "!**/client/**",
+      "!**/config/**",
+      "!**/coverage/**",
+      "!.*.*",
+      "!*.json",
+      "!*.js"
+    ]
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.1.3",
+    "bootstrap-vue": "^2.21.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "javascript-time-ago": "^2.3.10",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "morgan": "^1.10.0",
+    "rickshaw": "^1.7.1",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@jest-mock/express": "^1.4.5",
+    "concurrently": "^6.3.0",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.3.1",
+    "madge": "^5.0.1",
+    "mockingoose": "^2.15.2",
+    "nodemon": "^2.0.14",
+    "prettier": "^2.4.1",
+    "sinon": "^12.0.1",
+    "superagent": "^6.1.0",
+    "supertest": "^6.1.6"
+  }
+}
